@@ -6,3 +6,14 @@ If a = [1, 2] and b = [1], the result should be [2].
 
 If a = [1, 2, 2, 2, 3] and b = [2], the result should be [1, 3].
 */
+
+using System;
+
+public class Kata
+{
+  public static int[] ArrayDiff(int[] a, int[] b)
+  {
+    int[] c = Array.FindAll(a, x => Array.IndexOf(b, x) == -1);
+    return c;
+  }
+}
